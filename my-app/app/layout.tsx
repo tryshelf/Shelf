@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Instrument_Serif, DM_Sans, DM_Mono } from 'next/font/google';
+import { Instrument_Serif, DM_Sans, DM_Mono, Caveat } from 'next/font/google';
 import './globals.css';
 
 const instrumentSerif = Instrument_Serif({
@@ -20,6 +20,11 @@ const dmMono = DM_Mono({
   subsets: ['latin'],
 });
 
+const caveat = Caveat({
+  subsets: ['latin'],
+  variable: '--font-caveat',
+});
+
 export const metadata: Metadata = {
   title: 'Shelf',
   description:
@@ -30,7 +35,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html
       lang="en"
-      className={`${instrumentSerif.variable} ${dmSans.variable} ${dmMono.variable} h-full antialiased`}
+      className={`${instrumentSerif.variable} ${dmSans.variable} ${dmMono.variable} ${caveat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

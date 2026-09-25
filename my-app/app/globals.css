@@ -4,6 +4,7 @@
   --font-serif: var(--font-instrument-serif), Georgia, serif;
   --font-sans: var(--font-dm-sans), system-ui, sans-serif;
   --font-mono: var(--font-dm-mono), monospace;
+  --font-caveat: var(--font-caveat), cursive;
 
   --color-brand: #c75738;
   --color-brand-hover: #b04b2f;
