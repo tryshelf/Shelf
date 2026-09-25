@@ -66,7 +66,7 @@ export default function WHome() {
             priority
           />
 
-          <div className="absolute top-4 right-2 lg:top-24 lg:right-23 px-4 py-3 rounded-[12.8px] bg-[#D1BA85] rotate-10 inline-flex text-[#342A22] leading-4 text-[12px] font-bold shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.10)]">
+          <div className="absolute top-4 right-2 lg:top-24 lg:right-15 px-4 py-3 rounded-[12.8px] bg-[#D1BA85] rotate-10 inline-flex text-[#342A22] leading-4 text-[12px] font-bold shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.10)]">
             A Glimpse of Shelf
           </div>
           <div className="absolute bottom-13 left-0 px-4 py-3 rounded-[12.8px] bg-[#D1BA85] rotate-5 inline-flex text-[#342A22] leading-4 text-[12px] font-bold shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.10)]">

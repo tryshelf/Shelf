@@ -5,9 +5,9 @@ import How from './wcomponent/How';
 import Experience from './wcomponent/Experience';
 import Community from './wcomponent/Community';
 import Public from './wcomponent/Public';
-// import FAQ from './wcomponent/FAQ';
-// import Banner from './wcomponent/Banner';
-// import WFooter from './wcomponent/Wfooter';
+import FAQ from './wcomponent/FAQ';
+import Banner from './wcomponent/Banner';
+import WFooter from './wcomponent/Wfooter';
 
 export const metadata = {
   title: 'Waitlist | Shelf',
@@ -25,9 +25,9 @@ export default function Waitlist() {
       <Experience />
       <Community />
       <Public />
-      {/* <FAQ />
+      <FAQ />
       <Banner />
-      <WFooter /> */}
+      <WFooter />
     </div>
   );
 }
