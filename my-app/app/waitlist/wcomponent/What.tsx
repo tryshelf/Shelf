@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 
 export default function What() {
   return (
-    <section className="max-w-7xl mx-auto py-10 lg:py-15 px-5 lg:px-8">
+    <section id="what" className="max-w-7xl mx-auto py-10 lg:py-15 px-5 lg:px-8">
       <div className="text-center space-y-2">
         <h1 className="uppercase text-[12px] leading-4 tracking-[1.2px] font-mono text-brand">
           what we do

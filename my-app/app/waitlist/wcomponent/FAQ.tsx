@@ -40,7 +40,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="max-w-5xl mx-auto py-8 md:py-10 lg:py-15 px-4 md:px-6 lg:px-8 mt-6 md:mt-3">
+    <section id='faq' className="max-w-5xl mx-auto py-8 md:py-10 lg:py-15 px-4 md:px-6 lg:px-8 mt-6 md:mt-3">
       <div className="text-center space-y-2">
         <h1 className="uppercase text-[11px] md:text-[12px] leading-4 tracking-[1.2px] font-mono text-brand">
           frequently asked question

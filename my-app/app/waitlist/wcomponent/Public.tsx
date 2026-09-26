@@ -6,7 +6,7 @@ import ghiyas from '@/public/Assets/ghiyas.png';
 
 export default function Public() {
   return (
-    <section className="max-w-7xl mx-auto pt-10 lg:pt-15 pb-10 lg:pb-15 px-5 lg:px-8 border-t border-[#F1ECE4] mt-10 lg:mt-15">
+    <section id="public" className="max-w-7xl mx-auto pt-10 lg:pt-15 pb-10 lg:pb-15 px-5 lg:px-8 border-t border-[#F1ECE4] mt-10 lg:mt-15">
       <div>
         <h1 className="uppercase text-[12px] leading-4 tracking-[1.2px] font-mono text-brand">
           building in public

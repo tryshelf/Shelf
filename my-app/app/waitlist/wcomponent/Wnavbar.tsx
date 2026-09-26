@@ -9,54 +9,54 @@ export default function WNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#FAF6EF]/95 backdrop-blur-md border-b border-[#E4DBD1] font-sans">
+    <nav className="sticky top-0 z-50 border-b border-[#E4DBD1] bg-[#FAF6EF]/95 font-sans backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-5 py-4 md:py-5">
         <div className="flex items-center justify-between">
           <div>
             <Image
               src={logo}
               alt="Shelf logo"
-              className="h-8 md:h-10 w-auto object-contain"
+              className="h-8 w-auto object-contain md:h-10"
               priority
             />
           </div>
 
-          <ul className="hidden md:flex items-center space-x-5 text-[14px] font-medium">
+          <ul className="hidden items-center space-x-5 text-[14px] font-medium md:flex">
             <li>
-              <a href="#" className="hover:text-brand transition-colors">
+              <a href="#how" className="hover:text-brand transition-colors">
                 How it works
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-brand transition-colors">
+              <a href="#how" className="hover:text-brand transition-colors">
                 For Authors
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-brand transition-colors">
+              <a href="#how" className="hover:text-brand transition-colors">
                 For Readers
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-brand transition-colors">
+              <a href="#public" className="hover:text-brand transition-colors">
                 Journal
               </a>
             </li>
           </ul>
 
           <div className="flex items-center gap-3">
-            <button className="bg-brand py-2 md:py-2.75 px-3.5 md:px-4 rounded-full text-[#E4DBD1] text-[13px] md:text-[14px] cursor-pointer hover:opacity-95 transition-opacity">
+            <button className="bg-brand cursor-pointer rounded-full px-3.5 py-2 text-[13px] text-[#E4DBD1] transition-opacity hover:opacity-95 md:px-4 md:py-2.75 md:text-[14px]">
               Join Waitlist
             </button>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-[#1C1917] p-1 focus:outline-none cursor-pointer"
+              className="cursor-pointer p-1 text-[#1C1917] focus:outline-none md:hidden"
               aria-label="Toggle Menu"
             >
               <Icon
-                icon={isOpen ? 'lucide:x' : 'lucide:menu'}
-                className="w-6 h-6"
+                icon={isOpen ? "lucide:x" : "lucide:menu"}
+                className="h-6 w-6"
               />
             </button>
           </div>
@@ -65,40 +65,40 @@ export default function WNavbar() {
 
       {/* Mobile Dropdown Drawer */}
       {isOpen && (
-        <div className="md:hidden border-t border-[#E4DBD1] bg-[#FAF6EF] px-5 py-6 space-y-4">
-          <ul className="space-y-4 font-bold text-[15px] text-[#1C1917]">
+        <div className="space-y-4 border-t border-[#E4DBD1] bg-[#FAF6EF] px-5 py-6 md:hidden">
+          <ul className="space-y-4 text-[15px] font-normal text-[#1C1917]">
             <li>
               <a
-                href="#"
+                href="#how"
                 onClick={() => setIsOpen(false)}
-                className="block hover:text-brand transition-colors"
+                className="hover:text-brand block transition-colors"
               >
                 How it works
               </a>
             </li>
             <li>
               <a
-                href="#"
+                href="#how"
                 onClick={() => setIsOpen(false)}
-                className="block hover:text-brand transition-colors"
+                className="hover:text-brand block transition-colors"
               >
                 For Authors
               </a>
             </li>
             <li>
               <a
-                href="#"
+                href="#how"
                 onClick={() => setIsOpen(false)}
-                className="block hover:text-brand transition-colors"
+                className="hover:text-brand block transition-colors"
               >
                 For Readers
               </a>
             </li>
             <li>
               <a
-                href="#"
+                href="#public"
                 onClick={() => setIsOpen(false)}
-                className="block hover:text-brand transition-colors"
+                className="hover:text-brand block transition-colors"
               >
                 Journal
               </a>
@@ -107,12 +107,14 @@ export default function WNavbar() {
 
           <div className="pt-2">
             <a
-              href="#"
+              href="https://chat.whatsapp.com/Hfu40HaZEBRIRZTLiigkKg"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
-              className="inline-flex items-center gap-2 border border-[#3D2212]/20 py-2.5 px-4 rounded-full font-bold text-[14px] text-[#1C1917] hover:bg-[#3D2212]/5 transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-[#3D2212]/20 px-4 py-2.5 text-[14px] font-bold text-[#1C1917] transition-colors hover:bg-[#3D2212]/5"
             >
-              Join our community{' '}
-              <Icon icon="akar-icons:arrow-up-right" className="w-4 h-4" />
+              Join our community{" "}
+              <Icon icon="akar-icons:arrow-up-right" className="h-4 w-4" />
             </a>
           </div>
         </div>
