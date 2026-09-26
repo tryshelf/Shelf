@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Icon } from "@iconify/react";
 import logo from "@/public/Assets/logo.png";
 
@@ -9,11 +10,13 @@ export default function WFooter() {
         <div className="grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-12 lg:gap-12">
           {/* Brand & Description Column */}
           <div className="space-y-4 lg:col-span-5">
-            <Image
-              src={logo}
-              alt="Shelf logo"
-              className="h-8 w-auto object-contain"
-            />
+            <Link href="/waitlist">
+              <Image
+                src={logo}
+                alt="Shelf logo"
+                className="h-8 w-auto object-contain cursor-pointer"
+              />
+            </Link>
             <p className="max-w-sm font-sans text-[14px] leading-relaxed text-[#6B625B]">
               A quieter place to discover African stories, support independent
               writers, and keep good books close.
@@ -66,24 +69,24 @@ export default function WFooter() {
             </h3>
             <ul className="space-y-3 font-sans text-[14px] text-[#1C1917]">
               <li>
-                <a href="#what" className="hover:text-brand transition-colors">
+                <Link href="/waitlist#what" className="hover:text-brand transition-colors">
                   What we do
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#how" className="hover:text-brand transition-colors">
+                <Link href="/waitlist#how" className="hover:text-brand transition-colors">
                   How it works
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#faq" className="hover:text-brand transition-colors">
+                <Link href="/waitlist#faq" className="hover:text-brand transition-colors">
                   FAQs
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#home" className="hover:text-brand transition-colors">
+                <Link href="/waitlist#home" className="hover:text-brand transition-colors">
                   Waitlist
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -95,16 +98,18 @@ export default function WFooter() {
             </h3>
             <ul className="space-y-3 font-sans text-[14px] text-[#1C1917]">
               <li>
-                <a
-                  href="#public"
+                <Link
+                  href="/journal"
                   className="hover:text-brand transition-colors"
                 >
                   Journal
-                </a>
+                </Link>
               </li>
               <li>
                 <a
-                  href="#community"
+                  href="https://chat.whatsapp.com/Hfu40HaZEBRIRZTLiigkKg"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-brand transition-colors"
                 >
                   Join our community

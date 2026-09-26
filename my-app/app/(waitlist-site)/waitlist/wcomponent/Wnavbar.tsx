@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Icon } from '@iconify/react';
 import logo from '@/public/Assets/logo.png';
 
@@ -12,42 +13,45 @@ export default function WNavbar() {
     <nav className="sticky top-0 z-50 border-b border-[#E4DBD1] bg-[#FAF6EF]/95 font-sans backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-5 py-4 md:py-5">
         <div className="flex items-center justify-between">
-          <div>
+          <Link href="/waitlist">
             <Image
               src={logo}
               alt="Shelf logo"
-              className="h-8 w-auto object-contain md:h-10"
+              className="h-8 w-auto object-contain md:h-10 cursor-pointer"
               priority
             />
-          </div>
+          </Link>
 
           <ul className="hidden items-center space-x-5 text-[14px] font-medium md:flex">
             <li>
-              <a href="#how" className="hover:text-brand transition-colors">
+              <Link href="/waitlist#how" className="hover:text-brand transition-colors">
                 How it works
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#how" className="hover:text-brand transition-colors">
+              <Link href="/waitlist#how" className="hover:text-brand transition-colors">
                 For Authors
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#how" className="hover:text-brand transition-colors">
+              <Link href="/waitlist#how" className="hover:text-brand transition-colors">
                 For Readers
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#public" className="hover:text-brand transition-colors">
+              <Link href="/journal" className="hover:text-brand transition-colors">
                 Journal
-              </a>
+              </Link>
             </li>
           </ul>
 
           <div className="flex items-center gap-3">
-            <button className="bg-brand cursor-pointer rounded-full px-3.5 py-2 text-[13px] text-[#E4DBD1] transition-opacity hover:opacity-95 md:px-4 md:py-2.75 md:text-[14px]">
+            <Link
+              href="/waitlist#home"
+              className="bg-brand cursor-pointer rounded-full px-3.5 py-2 text-[13px] text-[#E4DBD1] transition-opacity hover:opacity-95 md:px-4 md:py-2.75 md:text-[14px]"
+            >
               Join Waitlist
-            </button>
+            </Link>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -68,40 +72,40 @@ export default function WNavbar() {
         <div className="space-y-4 border-t border-[#E4DBD1] bg-[#FAF6EF] px-5 py-6 md:hidden">
           <ul className="space-y-4 text-[15px] font-normal text-[#1C1917]">
             <li>
-              <a
-                href="#how"
+              <Link
+                href="/waitlist#how"
                 onClick={() => setIsOpen(false)}
                 className="hover:text-brand block transition-colors"
               >
                 How it works
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#how"
+              <Link
+                href="/waitlist#how"
                 onClick={() => setIsOpen(false)}
                 className="hover:text-brand block transition-colors"
               >
                 For Authors
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#how"
+              <Link
+                href="/waitlist#how"
                 onClick={() => setIsOpen(false)}
                 className="hover:text-brand block transition-colors"
               >
                 For Readers
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#public"
+              <Link
+                href="/journal"
                 onClick={() => setIsOpen(false)}
                 className="hover:text-brand block transition-colors"
               >
                 Journal
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -122,3 +126,4 @@ export default function WNavbar() {
     </nav>
   );
 }
+
