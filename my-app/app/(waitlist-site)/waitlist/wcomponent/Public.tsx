@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Icon } from '@iconify/react';
 import design from '@/public/Assets/Design.png';
 import finance from '@/public/Assets/finance.png';
@@ -20,9 +21,9 @@ export default function Public() {
         </p>
       </div>
 
-      <div className="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row lg:justify-between items-stretch gap-6 mt-10">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-10">
         {/* Card 1 - Design Note */}
-        <div className="w-full lg:w-1/3 bg-white border border-[#3D2212]/10 p-5 lg:p-6 rounded-2xl flex flex-col justify-between">
+        <div className="w-full bg-white border border-[#3D2212]/10 p-5 lg:p-6 rounded-2xl flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between">
               <span className="font-mono text-[10px] lg:text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 bg-[#EFE8DF] text-[#1C1917] rounded-md">
@@ -65,7 +66,7 @@ export default function Public() {
         </div>
 
         {/* Card 2 - Finance Note */}
-        <div className="w-full lg:w-1/3 bg-white border border-[#3D2212]/10 p-5 lg:p-6 rounded-2xl flex flex-col justify-between">
+        <div className="w-full bg-white border border-[#3D2212]/10 p-5 lg:p-6 rounded-2xl flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between">
               <span className="font-mono text-[10px] lg:text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 bg-[#EFE8DF] text-[#1C1917] rounded-md">
@@ -108,7 +109,7 @@ export default function Public() {
         </div>
 
         {/* Card 3 - Finance Note (Ghiyas) */}
-        <div className="w-full lg:w-1/3 bg-white border border-[#3D2212]/10 p-5 lg:p-6 rounded-2xl flex flex-col justify-between">
+        <div className="w-full bg-white border border-[#3D2212]/10 p-5 lg:p-6 rounded-2xl flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between">
               <span className="font-mono text-[10px] lg:text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 bg-[#EFE8DF] text-[#1C1917] rounded-md">
@@ -152,13 +153,13 @@ export default function Public() {
       </div>
 
       <div className="mt-10 lg:mt-12">
-        <a
-          href="#"
+        <Link
+          href="/journal"
           className="inline-flex items-center gap-2 font-sans font-bold text-brand text-[15px] hover:underline"
         >
           Follow the Build{' '}
           <Icon icon="lucide:arrow-right" className="w-4 h-4" />
-        </a>
+        </Link>
       </div>
     </section>
   );

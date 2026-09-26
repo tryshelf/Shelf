@@ -95,7 +95,10 @@ export default function WFooter() {
             </h3>
             <ul className="space-y-3 font-sans text-[14px] text-[#1C1917]">
               <li>
-                <a href="#" className="hover:text-brand transition-colors">
+                <a
+                  href="#public"
+                  className="hover:text-brand transition-colors"
+                >
                   Journal
                 </a>
               </li>
