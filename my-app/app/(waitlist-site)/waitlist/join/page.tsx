@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import Image from "next/image";
-import shelf from "@/public/assets/shelf_icon.png";
 
 interface Formdata {
   name: string;
@@ -344,7 +343,7 @@ export default function JoinWaitlist() {
             <div className="space-y-3 text-center">
               <div className="flex justify-center">
                 <Image
-                  src={shelf}
+                  src="/assets/shelf_icon.png"
                   alt="Books graphic"
                   width={80}
                   height={80}
