@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import shelf from "@/public/Assets/shelf.png";
+import Link from "next/link";
 
 export default function WHome() {
   return (
@@ -15,21 +16,24 @@ export default function WHome() {
             a new home for stories
           </p>
 
-          <h1 className="mt-4 max-w-[320px] font-serif text-[48px] leading-11 tracking-tight text-[#1C1917] sm:text-[72px] sm:leading-16 lg:max-w-130 lg:text-[118.4px] lg:leading-[94.7px] lg:tracking-[-4.474px]">
+          <h1 className="mt-4 max-w-75 font-serif text-[48px] leading-11 tracking-tight text-[#1C1917] md:text-[72px] md:leading-16 lg:max-w-130 lg:text-[118.4px] lg:leading-[94.7px] lg:tracking-[-4.474px]">
             There is always room{" "}
             <span className="text-brand italic">for a story.</span>
           </h1>
 
-          <p className="mt-6 max-w-lg font-sans text-[16px] leading-6.5 text-[#817065] sm:text-[18px] sm:leading-[29.2px] lg:mt-8">
+          <p className="mt-6 max-w-lg font-sans text-[16px] leading-6.5 text-[#817065] md:text-[18px] md:leading-[29.2px] lg:mt-8">
             Shelf is a reading room and publishing home for African voices.
             Discover, buy, own, and read books from African authors. Or publish
             your own and get paid directly into your bank account.
           </p>
 
-          <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-            <div className="bg-brand flex items-center justify-center gap-2 rounded-full px-5 py-3 font-sans text-[14px] leading-5 font-bold text-[#E4DBD1]">
+          <div className="mt-8 flex flex-col items-stretch gap-3 md:flex-row md:items-center">
+            <Link
+              href="/waitlist/join"
+              className="bg-brand flex items-center justify-center gap-2 rounded-full px-5 py-3 font-sans text-[14px] leading-5 font-bold text-[#E4DBD1]"
+            >
               Join the waitlist <Icon icon="akar-icons:arrow-up-right" />
-            </div>
+            </Link>
 
             <a
               href="https://chat.whatsapp.com/Hfu40HaZEBRIRZTLiigkKg"
@@ -60,7 +64,7 @@ export default function WHome() {
             </div>
 
             {/* Text Label */}
-            <p className="font-sans text-[12px] font-medium whitespace-normal text-[#6B625B] sm:whitespace-nowrap">
+            <p className="font-sans text-[12px] font-medium whitespace-normal text-[#6B625B] md:whitespace-nowrap">
               Join 740+ early Nigerian readers & authors in our Founding
               Community
             </p>

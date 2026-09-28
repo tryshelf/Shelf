@@ -47,7 +47,7 @@ export default function WNavbar() {
 
           <div className="flex items-center gap-3">
             <Link
-              href="/waitlist#home"
+              href="/waitlist/join"
               className="bg-brand cursor-pointer rounded-full px-3.5 py-2 text-[13px] text-[#E4DBD1] transition-opacity hover:opacity-95 md:px-4 md:py-2.75 md:text-[14px]"
             >
               Join Waitlist

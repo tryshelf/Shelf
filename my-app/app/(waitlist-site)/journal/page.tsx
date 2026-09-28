@@ -1,14 +1,12 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import { useRouter } from "next/navigation";
 import design from "@/public/Assets/Design.png";
 import finance from "@/public/Assets/finance.png";
 import ghiyas from "@/public/Assets/ghiyas.png";
 import ghiyas2 from "@/public/Assets/ghiyas2.png";
 import work from "@/public/Assets/work.png";
-import team from '@/public/Assets/team.jpg';
-import { Icon } from "@iconify/react";
+import team from "@/public/Assets/team.jpg";
 
 interface JournalArticle {
   id: number;
@@ -98,37 +96,25 @@ const journalArticles: JournalArticle[] = [
 ];
 
 export default function Journal() {
-  const router = useRouter();
-
-  const handleBack = () => {
-    router.back();
-  };
-
   return (
     <section
       id="public"
       className="mx-auto mt-10 max-w-7xl px-5 pt-10 pb-10 lg:mt-15 lg:px-8 lg:pt-3 lg:pb-15"
     >
-      <button
-        onClick={handleBack}
-        className="text-brand mb-8 flex cursor-pointer items-center gap-1 font-mono text-xs hover:underline md:text-sm"
-      >
-        <Icon icon="lucide:arrow-left" />
-        back
-      </button>
-
-      <div>
+      <div className="text-center">
         <h1 className="text-brand font-mono text-[12px] leading-4 tracking-[1.2px] uppercase">
-          Our journal
-        </h1>
-        <h1 className="mt-2 font-serif text-[32px] leading-10 text-[#1C1917] md:text-[40px] md:leading-11 lg:text-[48px] lg:leading-12">
           Sharing as we build.
         </h1>
-        <p className="mt-3 max-w-2xl font-sans text-[15px] leading-6 text-[#6B625B] md:text-[16px] lg:text-[18px] lg:leading-7">
+        <h1 className="mt-2 font-serif text-[32px] leading-10 text-[#1C1917] md:text-[40px] md:leading-11 lg:text-[48px] lg:leading-12">
+          Our journal
+        </h1>
+        <p className="mx-auto mt-3 max-w-2xl font-sans text-[15px] leading-6 text-[#6B625B] md:text-[16px] lg:text-[18px] lg:leading-7">
           Behind-the-scenes thoughts, architecture decisions, and handwritten
           field notes from the team building Shelf for African storytellers.
         </p>
       </div>
+
+      <hr className="border-t border-[#3D2212]/10 mt-9 mb-15" />
 
       <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {journalArticles.map((article) => (
@@ -169,7 +155,7 @@ export default function Journal() {
               </span>
               <a
                 href={article.link}
-                className="font-caveat text-brand flex items-center gap-1 text-[22px] font-bold hover:underline lg:text-[24px]"
+                className="font-caveat text-brand flex items-center gap-1 text-[15px] font-bold hover:underline lg:text-[20px]"
               >
                 Read note ✍️
               </a>

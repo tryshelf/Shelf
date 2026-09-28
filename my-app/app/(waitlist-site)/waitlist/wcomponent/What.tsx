@@ -10,7 +10,7 @@ export default function What() {
         <h1 className="font-serif text-[#1C1917] text-[32px] md:text-[40px] lg:text-[48px] leading-10 md:leading-11 lg:leading-12">
           Bringing publishing, discovery and reading together.
         </h1>
-        <p className="font-sans text-[#6B625B] leading-6 lg:leading-7 text-[15px] md:text-[16px] lg:text-[18px] max-w-190 mx-auto mt-4">
+        <p className="font-sans text-[#6B625B] leading-6 lg:leading-7 text-[14px] md:text-[16px] lg:text-[18px] max-w-190 mx-auto mt-4">
           There are stories being written every day and readers are constantly
           looking for something new. But getting from{' '}
           <span className="font-bold italic">“I wrote a book”</span> to{' '}

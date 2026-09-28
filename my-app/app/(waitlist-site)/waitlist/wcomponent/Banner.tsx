@@ -1,9 +1,8 @@
-"use client";
-
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import icon from "@/public/Assets/book.png";
 import shelf from "@/public/Assets/Shelfwater.png";
+import Link from "next/link";
 
 export default function Banner() {
   return (
@@ -30,9 +29,12 @@ export default function Banner() {
           </h2>
 
           <div className="mt-6 flex flex-col items-stretch gap-3 md:mt-8 md:flex-row md:items-center">
-            <div className="bg-brand flex cursor-pointer items-center justify-center gap-2 rounded-full px-5 py-3 text-center font-sans text-[14px] leading-5 font-bold text-[#E4DBD1] transition-opacity hover:opacity-95">
+            <Link
+              href="/waitlist/join"
+              className="bg-brand flex cursor-pointer items-center justify-center gap-2 rounded-full px-5 py-3 text-center font-sans text-[14px] leading-5 font-bold text-[#E4DBD1] transition-opacity hover:opacity-95"
+            >
               Join the waitlist <Icon icon="akar-icons:arrow-right" />
-            </div>
+            </Link>
 
             <a
               href="https://chat.whatsapp.com/Hfu40HaZEBRIRZTLiigkKg"
