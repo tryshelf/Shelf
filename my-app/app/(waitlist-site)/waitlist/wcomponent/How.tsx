@@ -25,7 +25,7 @@ export default function How() {
             <div className="px-3 py-1 bg-brand text-white font-mono text-[10px] leading-4 lg:text-[12px] uppercase tracking-[2.2px] rounded-full w-fit">
               FOR AUTHORS
             </div>
-            <h2 className="font-serif text-[#1C1917] text-[28px] md:text-[28px] lg:text-[30px] leading-8 mt-4">
+            <h2 className="font-sans text-[#1C1917] text-[28px] md:text-[28px] lg:text-[30px] leading-8 mt-4">
               Publish. Reach. Earn.
             </h2>
 
@@ -90,7 +90,7 @@ export default function How() {
             <div className="px-3 py-1 bg-[#3D2212] text-[#E4DBD1] font-mono text-[10px] lg:text-[12px] uppercase tracking-[2.2px] rounded-full w-fit">
               FOR READERS
             </div>
-            <h2 className="font-serif text-[#1C1917] text-[28px] md:text-[28px] lg:text-[30px] leading-tight mt-4">
+            <h2 className="font-sans text-[#1C1917] text-[28px] md:text-[28px] lg:text-[30px] leading-tight mt-4">
               Discover. Buy. Read.
             </h2>
 

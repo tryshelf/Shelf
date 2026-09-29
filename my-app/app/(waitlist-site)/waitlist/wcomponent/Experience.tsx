@@ -25,7 +25,7 @@ export default function Experience() {
               <Icon icon="lucide:pen-tool" className="text-brand h-6 w-6" />
             </div>
 
-            <h2 className="mt-4 font-serif text-[24px] leading-tight text-[#1C1917] lg:text-[28px]">
+            <h2 className="mt-4 font-sans text-[24px] leading-tight text-[#1C1917] lg:text-[28px]">
               For Authors & Writers
             </h2>
 
@@ -99,7 +99,7 @@ export default function Experience() {
               />
             </div>
 
-            <h2 className="mt-4 font-serif text-[24px] leading-tight text-[#1C1917] lg:text-[28px]">
+            <h2 className="mt-4 font-sans text-[24px] leading-tight text-[#1C1917] lg:text-[28px]">
               For Readers & Story Lovers
             </h2>
 

@@ -1,10 +1,33 @@
 import { Icon } from "@iconify/react";
 
 export default function Community() {
+  const cards = [
+    {
+      num: "01",
+      title: "Tell us what you need",
+      desc: "What would make publishing or reading easier for you?",
+    },
+    {
+      num: "02",
+      title: "Test what we’re building",
+      desc: "Experience parts of Shelf early as they become ready.",
+    },
+    {
+      num: "03",
+      title: "Give feedback",
+      desc: "Tell us what works, what doesn’t, and what we should rethink.",
+    },
+    {
+      num: "04",
+      title: "Shape what’s next",
+      desc: "Help influence the product we’re building.",
+    },
+  ];
+
   return (
     <section
       id="community"
-      className="mx-auto mt-5 max-w-6xl px-5 py-10 lg:px-8 lg:py-15"
+      className="mx-auto mt-5 max-w-7xl px-5 py-10 lg:px-8 lg:py-15"
     >
       <div className="space-y-2 text-center">
         <h1 className="text-brand font-mono text-[12px] leading-4 tracking-[1.2px] uppercase">
@@ -20,48 +43,30 @@ export default function Community() {
         </p>
       </div>
 
-      <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:flex lg:items-center lg:justify-between lg:gap-8">
-        <div className="flex w-full flex-col items-start space-y-3 rounded-2xl border border-[#3D2212]/10 bg-white p-6 lg:w-auto">
-          <h1 className="text-brand font-serif text-[32px]">01</h1>
-          <h2 className="font-serif text-[20px] leading-7">
-            Tell us what you need
-          </h2>
-          <p className="max-w-full font-sans text-[14px] leading-[22.8px] text-[#6B625B] lg:max-w-62.5">
-            What would make publishing or reading easier for you?
-          </p>
-        </div>
-
-        <div className="flex w-full flex-col items-start space-y-3 rounded-2xl border border-[#3D2212]/10 bg-white p-6 lg:w-auto">
-          <h1 className="text-brand font-serif text-[32px]">02</h1>
-          <h2 className="font-serif text-[20px] leading-7">
-            Test what we’re building
-          </h2>
-          <p className="max-w-full font-sans text-[14px] leading-[22.8px] text-[#6B625B] lg:max-w-62.5">
-            Experience parts of Shelf early as they become ready.
-          </p>
-        </div>
-
-        <div className="flex w-full flex-col items-start space-y-3 rounded-2xl border border-[#3D2212]/10 bg-white p-6 lg:w-auto">
-          <h1 className="text-brand font-serif text-[32px]">03</h1>
-          <h2 className="font-serif text-[20px] leading-7">Give feedback</h2>
-          <p className="max-w-full font-sans text-[14px] leading-[22.8px] text-[#6B625B] lg:max-w-70">
-            Tell us what works, what doesn’t, and what we should rethink.
-          </p>
-        </div>
-
-        <div className="flex w-full flex-col items-start space-y-3 rounded-2xl border border-[#3D2212]/10 bg-white p-6 lg:w-auto">
-          <h1 className="text-brand font-serif text-[32px]">04</h1>
-          <h2 className="font-serif text-[20px] leading-7">
-            Shape what’s next
-          </h2>
-          <p className="max-w-full font-sans text-[14px] leading-[22.8px] text-[#6B625B] lg:max-w-77">
-            Help influence the product we’re building.
-          </p>
-        </div>
+      {/* Grid container forces equal 25% width per card on large screens */}
+      <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+        {cards.map((card) => (
+          <div
+            key={card.num}
+            className="flex flex-col justify-between rounded-2xl border border-[#3D2212]/10 bg-white p-6 transition-all hover:shadow-sm"
+          >
+            <div className="space-y-3">
+              <span className="text-brand block font-sans text-[22px] font-medium">
+                {card.num}
+              </span>
+              <h2 className="font-sans text-[18px] leading-6 font-normal text-[#1C1917]">
+                {card.title}
+              </h2>
+              <p className="font-sans text-[13.5px] leading-5 text-[#6B625B]">
+                {card.desc}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className="mt-10 flex items-center justify-center">
-        <div className="w-full space-y-4 rounded-3xl border border-[#3D2212]/10 bg-[#EFE8DF]/60 p-6 text-center lg:p-8">
+        <div className="max-w-5xl space-y-4 rounded-3xl border border-[#3D2212]/10 bg-[#EFE8DF]/60 p-6 text-center lg:p-8">
           <h1 className="font-serif text-[24px] leading-7.5 text-[#1C1917] md:text-[28px] lg:text-[30px]">
             Come build with us.
           </h1>
@@ -69,16 +74,17 @@ export default function Community() {
             As Shelf gets closer to launch, members of the Founding Community
             will have the opportunity to join our closed beta, experience what
             we’re building, share ideas, meet people and help us improve it
-            before we open the doors more widely.{" "}
+            before we open the doors more widely.
           </p>
 
           <a
             href="https://chat.whatsapp.com/Hfu40HaZEBRIRZTLiigkKg"
             rel="noopener noreferrer"
             target="_blank"
+            className="mt-4 inline-block"
           >
-            <div className="bg-brand mt-4 inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-5 py-3 font-sans text-[14px] leading-5 font-bold text-[#E4DBD1]">
-              Join the Founding Community{" "}
+            <div className="bg-brand inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-5 py-3 font-sans text-[14px] leading-5 font-bold text-[#E4DBD1] transition hover:opacity-90">
+              Join the Founding Community
               <Icon icon="akar-icons:arrow-up-right" />
             </div>
           </a>

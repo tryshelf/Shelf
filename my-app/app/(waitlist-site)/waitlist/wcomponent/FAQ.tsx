@@ -66,7 +66,7 @@ export default function FAQ() {
               className="w-full max-w-3xl bg-white border border-[#3D2212]/10 p-4 md:p-6 rounded-xl md:rounded-2xl cursor-pointer transition-colors duration-200"
             >
               <div className="flex justify-between items-center gap-3 md:gap-4">
-                <h3 className="font-serif text-[16px] md:text-[18px] lg:text-[20px] text-[#1C1917] leading-snug">
+                <h3 className="font-sans text-[16px] md:text-[18px] lg:text-[20px] text-[#1C1917] leading-snug">
                   {faq.question}
                 </h3>
                 <span className="text-[#C85231] font-bold text-lg md:text-xl shrink-0 select-none">
