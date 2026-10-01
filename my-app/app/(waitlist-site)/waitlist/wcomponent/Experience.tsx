@@ -29,7 +29,7 @@ export default function Experience() {
               For Authors & Writers
             </h2>
 
-            <p className="mt-3 mb-6 font-sans text-[12px] leading-relaxed text-[#6B625B] lg:text-[14px]">
+            <p className="mt-3 mb-6 font-sans text-[13px] leading-relaxed text-[#6B625B] lg:text-[14px]">
               Whether you’re an established novelist or an emerging voice
               writing short stories in your notes app, Shelf gives you full
               control over your work and earnings.
@@ -41,7 +41,7 @@ export default function Experience() {
                   icon="game-icons:check-mark"
                   className="text-brand mt-0.5 h-4 w-4 shrink-0"
                 />
-                <span className="font-sans text-[11px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
+                <span className="font-sans text-[12px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
                   Direct NGN payouts into your local bank account
                 </span>
               </li>
@@ -51,7 +51,7 @@ export default function Experience() {
                   icon="game-icons:check-mark"
                   className="text-brand mt-0.5 h-4 w-4 shrink-0"
                 />
-                <span className="font-sans text-[11px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
+                <span className="font-sans text-[12px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
                   Zero publisher gatekeeping or lengthy submission delays
                 </span>
               </li>
@@ -61,7 +61,7 @@ export default function Experience() {
                   icon="game-icons:check-mark"
                   className="text-brand mt-0.5 h-4 w-4 shrink-0"
                 />
-                <span className="font-sans text-[11px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
+                <span className="font-sans text-[12px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
                   Retain 100% ownership of your intellectual property rights
                 </span>
               </li>
@@ -71,7 +71,7 @@ export default function Experience() {
                   icon="game-icons:check-mark"
                   className="text-brand mt-0.5 h-4 w-4 shrink-0"
                 />
-                <span className="font-sans text-[11px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
+                <span className="font-sans text-[12px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
                   Analytics on local reader engagement & chapter completion
                   rates
                 </span>
@@ -103,7 +103,7 @@ export default function Experience() {
               For Readers & Story Lovers
             </h2>
 
-            <p className="mt-3 mb-6 font-sans text-[12px] leading-relaxed text-[#6B625B] lg:text-[14px]">
+            <p className="mt-3 mb-6 font-sans text-[13px] leading-relaxed text-[#6B625B] lg:text-[14px]">
               Discover books from new voices, independent writers and stories
               you might never find anywhere else and build your personal digital
               library. Read distraction-free on any smartphone, tablet, or
@@ -116,7 +116,7 @@ export default function Experience() {
                   icon="game-icons:check-mark"
                   className="mt-0.5 h-4 w-4 shrink-0 text-[#3D2212]"
                 />
-                <span className="font-sans text-[11px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
+                <span className="font-sans text-[12px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
                   Pay in Naira with local debit cards, transfer, or USSD
                 </span>
               </li>
@@ -126,7 +126,7 @@ export default function Experience() {
                   icon="game-icons:check-mark"
                   className="mt-0.5 h-4 w-4 shrink-0 text-[#3D2212]"
                 />
-                <span className="font-sans text-[11px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
+                <span className="font-sans text-[12px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
                   Tactile digital bookshelf with realistic wood grain aesthetics
                 </span>
               </li>
@@ -136,7 +136,7 @@ export default function Experience() {
                   icon="game-icons:check-mark"
                   className="mt-0.5 h-4 w-4 shrink-0 text-[#3D2212]"
                 />
-                <span className="font-sans text-[11px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
+                <span className="font-sans text-[12px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
                   Offline reading mode for low-connectivity environments
                 </span>
               </li>
@@ -146,7 +146,7 @@ export default function Experience() {
                   icon="game-icons:check-mark"
                   className="mt-0.5 h-4 w-4 shrink-0 text-[#3D2212]"
                 />
-                <span className="font-sans text-[11px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
+                <span className="font-sans text-[12px] leading-snug font-medium text-[#3D2212] lg:text-[13px]">
                   Exclusive founding member badges and book club discussions
                 </span>
               </li>

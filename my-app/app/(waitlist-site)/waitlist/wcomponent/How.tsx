@@ -44,10 +44,10 @@ export default function How() {
                 1
               </div>
               <div>
-                <h3 className="font-sans text-[10px] leading-[20px] font-bold text-[#1C1917] lg:text-[14px]">
+                <h3 className="font-sans text-[14px] leading-5 font-bold text-[#1C1917] lg:text-[14px]">
                   Publish
                 </h3>
-                <p className="mt-0.5 font-sans text-[9px] leading-snug text-[#6B625B] lg:text-[12px]">
+                <p className="mt-0.5 font-sans text-[12px] leading-snug text-[#6B625B] lg:text-[12px]">
                   Upload your book, add the details, set your price and publish
                 </p>
               </div>
@@ -58,10 +58,10 @@ export default function How() {
                 2
               </div>
               <div>
-                <h3 className="font-sans text-[10px] leading-[20px] font-bold text-[#1C1917] lg:text-[14px]">
+                <h3 className="font-sans text-[14px] leading-5 font-bold text-[#1C1917] lg:text-[14px]">
                   Reach
                 </h3>
-                <p className="mt-0.5 font-sans text-[9px] leading-snug text-[#6B625B] lg:text-[12px]">
+                <p className="mt-0.5 font-sans text-[12px] leading-snug text-[#6B625B] lg:text-[12px]">
                   Get your books in front of readers looking for their next
                   story.
                 </p>
@@ -73,10 +73,10 @@ export default function How() {
                 3
               </div>
               <div>
-                <h3 className="font-sans text-[10px] leading-[20px] font-bold text-[#1C1917] lg:text-[14px]">
+                <h3 className="font-sans text-[14px] leading-5 font-bold text-[#1C1917] lg:text-[14px]">
                   Get Paid Directly to Bank
                 </h3>
-                <p className="mt-0.5 font-sans text-[9px] leading-snug text-[#6B625B] lg:text-[12px]">
+                <p className="mt-0.5 font-sans text-[12px] leading-snug text-[#6B625B] lg:text-[12px]">
                   Earn from every sale of your book.
                 </p>
               </div>
@@ -109,10 +109,10 @@ export default function How() {
                 1
               </div>
               <div>
-                <h3 className="font-sans text-[10px] leading-[20px] font-bold text-[#1C1917] lg:text-[14px]">
+                <h3 className="font-sans text-[14px] leading-5 font-bold text-[#1C1917] lg:text-[14px]">
                   Discover
                 </h3>
-                <p className="mt-0.5 font-sans text-[9px] leading-snug text-[#6B625B] lg:text-[12px]">
+                <p className="mt-0.5 font-sans text-[12px] leading-snug text-[#6B625B] lg:text-[12px]">
                   Find books, authors and stories across genres.
                 </p>
               </div>
@@ -123,10 +123,10 @@ export default function How() {
                 2
               </div>
               <div>
-                <h3 className="font-sans text-[10px] leading-[20px] font-bold text-[#1C1917] lg:text-[14px]">
+                <h3 className="font-sans text-[14px] leading-5 font-bold text-[#1C1917] lg:text-[14px]">
                   Buy
                 </h3>
-                <p className="mt-0.5 font-sans text-[9px] leading-snug text-[#6B625B] lg:text-[12px]">
+                <p className="mt-0.5 font-sans text-[12px] leading-snug text-[#6B625B] lg:text-[12px]">
                   Choose a book you want and purchase it directly on Shelf.
                 </p>
               </div>
@@ -137,10 +137,10 @@ export default function How() {
                 3
               </div>
               <div>
-                <h3 className="font-sans text-[10px] leading-[20px] font-bold text-[#1C1917] lg:text-[14px]">
+                <h3 className="font-sans text-[14px] leading-5 font-bold text-[#1C1917] lg:text-[14px]">
                   Read
                 </h3>
-                <p className="mt-0.5 font-sans text-[9px] leading-snug text-[#6B625B] lg:text-[12px]">
+                <p className="mt-0.5 font-sans text-[12px] leading-snug text-[#6B625B] lg:text-[12px]">
                   Access your purchased books and start reading.
                 </p>
               </div>

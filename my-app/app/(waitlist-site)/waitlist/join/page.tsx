@@ -93,7 +93,7 @@ export default function JoinWaitlist() {
                 Home
               </span>{" "}
             </Link>
-            <span className="mx-1.5 text-[16px] leading-6 text-[#E6DEC9]">
+            <span className="mx-1 text-[16px] leading-6 text-[#E6DEC9]">
               /
             </span>{" "}
             Official Launch Waitlist
@@ -114,7 +114,7 @@ export default function JoinWaitlist() {
 
         {/* Step 1 Content */}
         {step === 1 && (
-          <div className="mt-20 space-y-3 px-6 pb-10 md:p-12">
+          <div className="space-y-3 px-6 pb-10 md:p-12">
             <h1 className="mt-3 font-serif text-[48px] leading-12 text-[#1C1917]">
               There is always room for a story.
             </h1>

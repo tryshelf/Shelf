@@ -37,7 +37,7 @@ export default function What() {
                 className="text-brand h-6 w-6"
               />
             </div>
-            <h2 className="font-serif text-[28px] lg:text-[36px]">Publish</h2>
+            <h2 className="font-sans leading-7.5 tracking-[-1px] text-[28px] lg:text-[30px]">Publish</h2>
             <p className="max-w-full font-sans text-[14px] leading-[22.8px] text-[#6B625B] lg:max-w-82.5">
               <span className="font-bold">
                 Have something worth sharing? Put it on Shelf.
@@ -51,7 +51,7 @@ export default function What() {
             <div className="bg-brand/10 flex h-12 w-12 items-center justify-center rounded-2xl">
               <Icon icon="lucide:users" className="text-brand h-6 w-6" />
             </div>
-            <h2 className="font-serif text-[28px] lg:text-[36px]">Discover</h2>
+            <h2 className="font-sans leading-7.5 tracking-[-1px] text-[28px] lg:text-[30px]">Discover</h2>
             <p className="max-w-full font-sans text-[14px] leading-[22.8px] text-[#6B625B] lg:max-w-76">
               <span className="font-bold">
                 Find books and writers worth knowing.
@@ -65,7 +65,7 @@ export default function What() {
             <div className="bg-brand/10 flex h-12 w-12 items-center justify-center rounded-2xl">
               <Icon icon="lucide:book-open" className="text-brand h-6 w-6" />
             </div>
-            <h2 className="font-serif text-[28px] lg:text-[36px]">Read</h2>
+            <h2 className="font-sans leadjing-7.5 tracking-[-1px] text-[28px] lg:text-[30px]">Read</h2>
             <p className="max-w-full font-sans text-[14px] leading-[22.8px] text-[#6B625B] lg:max-w-80">
               <span className="font-bold">
                 Buy your books and keep them in one place.
