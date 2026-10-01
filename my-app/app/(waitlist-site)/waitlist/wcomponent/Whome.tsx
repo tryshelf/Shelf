@@ -16,7 +16,7 @@ export default function WHome() {
             a new home for stories
           </p>
 
-          <h1 className="mt-4 max-w-75 font-serif text-[48px] leading-11 tracking-tight text-[#1C1917] md:text-[72px] md:leading-16 lg:max-w-130 lg:text-[118.4px] lg:leading-[94.7px] lg:tracking-[-4.474px]">
+          <h1 className="mt-4 max-w-75 font-serif text-[55px] leading-11 tracking-tight text-[#1C1917] md:text-[72px] md:leading-16 lg:max-w-130 lg:text-[118.4px] lg:leading-[94.7px] lg:tracking-[-4.474px]">
             There is always room{" "}
             <span className="text-brand italic">for a story.</span>
           </h1>

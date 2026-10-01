@@ -8,10 +8,10 @@ export default function Experience() {
         <h1 className="text-brand font-mono text-[12px] leading-4 tracking-[1.2px] uppercase">
           tailored experience
         </h1>
-        <h1 className="font-serif text-[32px] leading-10 text-[#1C1917] md:text-[40px] md:leading-11 lg:text-[48px] lg:leading-12">
+        <h1 className="font-serif text-[40px] leading-10 text-[#1C1917] md:text-[50px] md:leading-11 lg:text-[68px] lg:leading-15.5 lg:tracking-[-3.5px]">
           Built for those who read and those who write.
         </h1>
-        <p className="mx-auto mt-4 max-w-190 font-sans text-[15px] leading-6 text-[#6B625B] md:text-[16px] lg:text-[18px] lg:leading-7">
+        <p className="mx-auto mt-2 max-w-190 font-sans text-[15px] leading-6 text-[#6B625B] md:text-[16px] lg:text-[18px] lg:leading-7">
           Explore how Shelf provides a dedicated home for both sides of the
           literary ecosystem.
         </p>

@@ -33,10 +33,10 @@ export default function Community() {
         <h1 className="text-brand font-mono text-[12px] leading-4 tracking-[1.2px] uppercase">
           the founding community
         </h1>
-        <h1 className="font-serif text-[32px] leading-10 text-[#1C1917] md:text-[40px] md:leading-11 lg:text-[48px] lg:leading-12">
+        <h1 className="font-serif text-[40px] leading-10 text-[#1C1917] md:text-[50px] md:leading-11 lg:text-[68px] lg:leading-15.5 lg:tracking-[-3.5px]">
           Help us build Shelf.
         </h1>
-        <p className="mx-auto mt-4 max-w-190 font-sans text-[15px] leading-6 text-[#6B625B] md:text-[16px] lg:text-[18px] lg:leading-7">
+        <p className="mx-auto mt-2 max-w-190 font-sans text-[15px] leading-6 text-[#6B625B] md:text-[16px] lg:text-[18px] lg:leading-7">
           Shelf isn’t finished yet and that’s the point. We’re bringing together
           a small group of readers and writers who want to be here from the
           beginning.
