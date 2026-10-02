@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import Image from "next/image";
 import { supabase } from "@/app/utils/supabase";
+import shelf from '@/public/Assets/shelf_icon.png'
 
 interface Formdata {
   name: string;
@@ -80,7 +81,7 @@ export default function JoinWaitlist() {
       // Save signup to Supabase
       const { error } = await supabase.from("waitlist").insert({
         name: formData.name,
-        email: formData.email,
+        email: formData.email.trim().toLowerCase(),
         location: formData.location,
         role: formData.role,
       });
@@ -453,8 +454,8 @@ export default function JoinWaitlist() {
             <div className="space-y-3 text-center">
               <div className="flex justify-center">
                 <Image
-                  src="/assets/shelf_icon.png"
-                  alt="Books graphic"
+                  src={shelf}
+                  alt="shelf"
                   width={80}
                   height={80}
                   priority
