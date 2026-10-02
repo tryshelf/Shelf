@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import Image from "next/image";
+import { supabase } from "@/app/utils/supabase";
 
 interface Formdata {
   name: string;
@@ -20,6 +21,8 @@ export default function JoinWaitlist() {
     location: "",
     role: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const totalSteps = 5;
 
@@ -30,7 +33,28 @@ export default function JoinWaitlist() {
   };
 
   const handleNext = () => {
-    if (step < totalSteps) {
+    setErrorMessage("");
+
+    if (step === 2) {
+      if (!formData.name.trim() || !formData.location.trim()) {
+        setErrorMessage("Please complete all fields before continuing.");
+        return;
+      }
+    }
+
+    if (step === 3) {
+      if (!formData.email.trim()) {
+        setErrorMessage("Please enter your email address.");
+        return;
+      }
+
+      if (!/\S+@\S+\.\S+/.test(formData.email)) {
+        setErrorMessage("Please enter a valid email address.");
+        return;
+      }
+    }
+
+    if (step < totalSteps - 1) {
       setStep(step + 1);
     }
   };
@@ -40,6 +64,75 @@ export default function JoinWaitlist() {
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const handleSubmit = async () => {
+    setErrorMessage("");
+
+    if (!formData.role) {
+      setErrorMessage("Please choose an option before continuing.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      // Save signup to Supabase
+      const { error } = await supabase.from("waitlist").insert({
+        name: formData.name,
+        email: formData.email,
+        location: formData.location,
+        role: formData.role,
+      });
+
+      if (error) {
+        console.error("Supabase error:", error);
+
+        if (error.code === "23505") {
+          setErrorMessage(
+            "You're already on the list. This email has already been registered.",
+          );
+        } else {
+          setErrorMessage("Something went wrong. Please try again.");
+        }
+
+        setLoading(false);
+        return;
+      }
+
+      // Send confirmation email (non-blocking if email service fails in dev/unverified domain)
+      try {
+        const emailResponse = await fetch("/api/waitlist-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            location: formData.location,
+            role: formData.role,
+          }),
+        });
+
+        if (!emailResponse.ok) {
+          const resData = await emailResponse.json().catch(() => ({}));
+          console.warn(
+            "Confirmation email warning:",
+            resData.error || emailResponse.statusText,
+          );
+        }
+      } catch (emailErr) {
+        console.warn("Email API call failed:", emailErr);
+      }
+
+      setLoading(false);
+      setStep(5);
+    } catch (error) {
+      console.error("Submission error:", error);
+      setLoading(false);
+      setErrorMessage("Something went wrong. Please try again.");
+    }
   };
 
   // Progress percentage (e.g. Step 1 = 25%, Step 2 = 50%, etc.)
@@ -171,6 +264,7 @@ export default function JoinWaitlist() {
                 <input
                   type="text"
                   name="name"
+                  required
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="e.g. Chinua Achebe"
@@ -184,6 +278,7 @@ export default function JoinWaitlist() {
                 <input
                   type="text"
                   name="location"
+                  required
                   value={formData.location}
                   onChange={handleChange}
                   placeholder="e.g. Lagos, Nigeria"
@@ -229,6 +324,7 @@ export default function JoinWaitlist() {
                 <input
                   type="text"
                   name="email"
+                  required
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="name@example.com"
@@ -319,6 +415,11 @@ export default function JoinWaitlist() {
             </div>
 
             {/* Buttons */}
+            {errorMessage && (
+              <p className="rounded-xl bg-[#FDF3E7] px-4 py-3 text-center text-[13px] font-medium text-[#C85231]">
+                {errorMessage}
+              </p>
+            )}
             <div className="mt-8 flex items-center gap-3">
               <button
                 onClick={handleBack}
@@ -328,10 +429,19 @@ export default function JoinWaitlist() {
               </button>
 
               <button
-                onClick={handleNext}
+                onClick={handleSubmit}
+                disabled={loading}
                 className="flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-full bg-[#C85231] py-3 text-[14px] font-medium text-white transition hover:opacity-90"
               >
-                Complete & Join <Icon icon="lucide:check" />
+                {loading ? (
+                  <span className="flex items-center">
+                    Joining <Icon icon="codex:loader" className="text-2xl" />
+                  </span>
+                ) : (
+                  <>
+                    Complete & Join <Icon icon="lucide:arrow-right" />
+                  </>
+                )}
               </button>
             </div>
           </div>
@@ -358,7 +468,7 @@ export default function JoinWaitlist() {
               <p className="mx-auto max-w-md font-sans text-[14px] leading-6 text-[#1C1917]/80">
                 Thank you,{" "}
                 <span className="font-bold text-[#1C1917]">
-                  {formData.name || "Ghiyas"}
+                  {formData.name}
                 </span>
                 . Your spot is reserved for our official launch. Feel free to
                 connect with our community or explore below:
@@ -431,16 +541,6 @@ export default function JoinWaitlist() {
                 </div>
               </Link>
             </div>
-
-            {/* Footer Link */}
-            {/* <div className="pt-4 text-center">
-              <a
-                href="/"
-                className="text-[13px] text-[#1C1917]/60 underline decoration-[#1C1917]/30 transition hover:text-[#1C1917]"
-              >
-                Return to Shelf Homepage
-              </a>
-            </div> */}
           </div>
         )}
       </div>
