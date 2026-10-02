@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import Image from "next/image";
 import { supabase } from "@/app/utils/supabase";
-import shelf from '@/public/Assets/shelf_icon.png'
+import shelf from "@/public/Assets/shelf_icon.png";
 
 interface Formdata {
   name: string;
@@ -179,7 +179,7 @@ export default function JoinWaitlist() {
       <div className="relative mt-15 w-full max-w-xl overflow-hidden rounded-3xl border border-[#E6DEC9] bg-white shadow-xl">
         {/* Card Header with Back button, Title, and Step Counter */}
         <div className="flex items-center justify-between px-6 py-6">
-          <h1 className="font-serif text-[20px] leading-7 text-[#1C1917]">
+          <h1 className="font-serif text-[17px] leading-7 text-[#1C1917] md:text-[20px]">
             <Link href="/waitlist">
               {" "}
               <span className="inline-flex items-center gap-1 font-sans text-[12px] leading-4 font-semibold text-[#1C1917]/60">
@@ -193,7 +193,7 @@ export default function JoinWaitlist() {
             Official Launch Waitlist
           </h1>
 
-          <h3 className="font-mono text-xs leading-4 tracking-[1.2px] text-[#1C1917]/50 uppercase">
+          <h3 className="font-mono text-[10px] leading-4 tracking-[1.2px] text-[#1C1917]/50 uppercase md:text-xs">
             step {step} of {totalSteps}
           </h3>
         </div>
@@ -288,6 +288,11 @@ export default function JoinWaitlist() {
               </div>
             </form>
 
+            {errorMessage && (
+              <p className="rounded-xl bg-[#FDF3E7] px-4 py-3 text-center text-[13px] font-medium text-[#C85231]">
+                {errorMessage}
+              </p>
+            )}
             <div className="mt-10 flex gap-2">
               <button
                 onClick={handleBack}
@@ -334,6 +339,11 @@ export default function JoinWaitlist() {
               </div>
             </form>
 
+            {errorMessage && (
+              <p className="rounded-xl bg-[#FDF3E7] px-4 py-3 text-center text-[13px] font-medium text-[#C85231]">
+                {errorMessage}
+              </p>
+            )}
             <div className="mt-10 flex gap-2">
               <button
                 onClick={handleBack}
